@@ -13,7 +13,7 @@ function getPortfolioData() {
       description: "Results-driven Frontend Developer with 5.5+ years of experience building scalable, performant web applications. Proven success delivering high-impact solutions across enterprise projects in finance and telecom sectors.",
       stats: [
         { value: "5.5+", label: "Years Experience" },
-        { value: "10+", label: "Projects Delivered" },
+        { value: "6+", label: "Projects Delivered" },
         { value: "$700M+", label: "Transactions Facilitated" }
       ]
     },
@@ -59,7 +59,7 @@ function getPortfolioData() {
         position: "Consultant - Frontend Developer | Tech Lead",
         company: "Capgemini (Client: Morgan Stanley)",
         period: "May 2024 - Jan 2025",
-        location: "Tokyo, Japan",
+        location: "India",
         achievements: [
           "Led as Tech Lead, driving end-to-end delivery of enterprise-grade frontend solutions",
           "Designed scalable frontend architecture using React, Redux, TypeScript, and JavaScript",
@@ -71,7 +71,7 @@ function getPortfolioData() {
         position: "Associate Technology L2 - Frontend Engineer",
         company: "Publicis Sapient (Client: Visible/Verizon)",
         period: "Nov 2021 - May 2024",
-        location: "Tokyo, Japan",
+        location: "India",
         achievements: [
           "Migrated large-scale landing pages from React to Next.js, driving 25% increase in organic search traffic",
           "Designed centralized reusable component library, reducing frontend development time by 30%",
@@ -282,7 +282,7 @@ export default function Home() {
             © 2024 Shubhankar Mukherjee. All rights reserved.
           </div>
           <div className="footerLinks">
-            <a href="https://github.com/shubhmukh" className="footerLink">
+            <a href="https://github.com/Shubhankar1850" className="footerLink">
               <Github size={20} />
             </a>
             <a href="https://linkedin.com/in/shubhmukh/" className="footerLink">
