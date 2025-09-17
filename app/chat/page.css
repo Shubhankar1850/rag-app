@@ -1,0 +1,42 @@
+.chat-container {
+    max-width: 980px;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    border-left: 1px solid rgba(255, 255, 255, 0.03);
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
+    background: linear-gradient(180deg, #060606 0%, #0b0b10 60%);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--muted-white);
+    position: relative;
+  }
+  
+  /* ---------- Header ---------- */
+  .chat-header {
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.15));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  }
+  
+  .chat-header h1 {
+    margin: 0;
+    font-size: 1.15rem;
+    letter-spacing: 0.2px;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  /* ---------- Small screens ---------- */
+  @media (max-width: 760px) {
+    .chat-container { 
+      max-width: 100%; 
+    }
+    
+    .chat-header { 
+      padding: 12px; 
+    }
+  }

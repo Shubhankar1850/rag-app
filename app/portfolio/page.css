@@ -1,0 +1,469 @@
+.container {
+    min-height: 100vh;
+    background-color: #1a1a1a;
+  }
+  
+  .header {
+    border-bottom: 1px solid #3a3a3a;
+    background-color: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  
+  .headerContent {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav {
+    display: none;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .nav {
+      display: flex;
+    }
+  }
+  
+  .navLink {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: white;
+  }
+  
+  .heroSection {
+    padding: 5rem 1rem;
+  }
+  
+  .heroContent {
+    max-width: 1152px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .heroTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .heroTitle {
+      font-size: 3.75rem;
+    }
+  }
+  
+  .heroDescription {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .statsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  
+  @media (min-width: 768px) {
+    .statsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .statItem {
+    text-align: center;
+  }
+  
+  .statValue {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #60a5fa;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statLabel {
+    color: #d1d5db;
+    font-size: 0.875rem;
+  }
+  
+  .section {
+    padding: 4rem 1rem;
+  }
+  
+  .sectionAlt {
+    padding: 4rem 1rem;
+    background-color: rgba(42, 42, 42, 0.3);
+  }
+  
+  .sectionContent {
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+  
+  .sectionTitle {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: white;
+  }
+  
+  .sectionDescription {
+    color: #d1d5db;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 32rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .skillsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .skillsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .skillCard {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #3a3a3a;
+  }
+  
+  .skillTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .skillTag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+  }
+  
+  .skillTagFrontend {
+    background-color: rgba(30, 58, 138, 0.5);
+    color: #93c5fd;
+  }
+  
+  .skillTagBackend {
+    background-color: rgba(20, 83, 45, 0.5);
+    color: #86efac;
+  }
+  
+  .skillTagTools {
+    background-color: rgba(88, 28, 135, 0.5);
+    color: #c4b5fd;
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .projectsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projectsGrid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .projectCard {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #3a3a3a;
+    transition: border-color 0.3s ease;
+  }
+  
+  .projectCard:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+  }
+  
+  .projectTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: white;
+  }
+  
+  .projectDescription {
+    color: #d1d5db;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+  
+  .projectTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .projectTag {
+    padding: 0.25rem 0.5rem;
+    background-color: #374151;
+    color: #d1d5db;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .projectLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .projectLink {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+  }
+  
+  .projectLink:hover {
+    color: #93c5fd;
+  }
+  
+  .experienceList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .experienceCard {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #3a3a3a;
+  }
+  
+  .experienceHeader {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .experienceHeader {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  
+  .experiencePosition {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .experienceCompany {
+    color: #60a5fa;
+  }
+  
+  .experienceDetails {
+    text-align: left;
+    color: #d1d5db;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .experienceDetails {
+      text-align: right;
+      margin-top: 0;
+    }
+  }
+  
+  .experienceDetail {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .experienceDetail + .experienceDetail {
+    margin-top: 0.25rem;
+  }
+  
+  .achievementsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .achievementItem {
+    color: #d1d5db;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .achievementBullet {
+    color: #60a5fa;
+    margin-right: 0.5rem;
+    margin-top: 0.125rem;
+  }
+  
+  .contactContent {
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contactGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .contactGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .contactCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #2a2a2a;
+    border-radius: 0.5rem;
+    border: 1px solid #3a3a3a;
+    text-decoration: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contactCard:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+  }
+  
+  .contactIcon {
+    color: #60a5fa;
+    margin-bottom: 0.75rem;
+  }
+  
+  .contactTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.25rem;
+  }
+  
+  .contactText {
+    color: #d1d5db;
+    font-size: 0.875rem;
+  }
+  
+  .contactButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contactButton:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .footer {
+    border-top: 1px solid #3a3a3a;
+    padding: 2rem 1rem;
+  }
+  
+  .footerContent {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: 768px) {
+    .footerContent {
+      flex-direction: row;
+    }
+  }
+  
+  .footerText {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .footerText {
+      margin-bottom: 0;
+    }
+  }
+  
+  .footerLinks {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footerLink {
+    color: #9ca3af;
+    transition: color 0.3s ease;
+  }
+  
+  .footerLink:hover {
+    color: white;
+  }

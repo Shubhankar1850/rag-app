@@ -1,0 +1,170 @@
+/* ---------- Cat-like slanted eye shape ---------- */
+.eye {
+  width: 160px;
+  height: 74px;
+  position: relative;
+  border-radius: 50% / 55%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  border: 6px solid rgba(6, 6, 6, 0.95);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.65),
+    inset 0 6px 22px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(120deg, #f5c75b 0%, #f19e1b 55%, #e28d0f 100%);
+  position: relative;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+/* left / right slight tilt */
+.eye.left { 
+  transform: rotate(-12deg); 
+}
+
+.eye.right { 
+  transform: rotate(12deg); 
+}
+
+/* inner glossy rim to mimic cut shape edge */
+.eye::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(60% 40% at 30% 60%, rgba(255, 255, 255, 0.06), transparent 20%),
+              linear-gradient(180deg, rgba(0, 0, 0, 0.045), transparent 40%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* eyelid pseudo-element used for blink animation */
+.eye::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  top: -100%;
+  background: linear-gradient(180deg, #070607, #0b0b10);
+  border-radius: inherit;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
+/* blink animation (down then up) */
+@keyframes blink {
+  0% { transform: translateY(-100%); }
+  35% { transform: translateY(0%); }
+  70% { transform: translateY(-100%); }
+  100% { transform: translateY(-100%); }
+}
+
+/* apply blink by toggling class */
+.eye.blink::after {
+  animation: blink 480ms cubic-bezier(.2, .9, .2, 1) forwards;
+}
+
+/* subtle speckles */
+.eye .speckles {
+  position: absolute;
+  inset: auto 10px 6px 10px;
+  height: 36px;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.07) 1px, transparent 2px),
+    radial-gradient(circle at 80% 60%, rgba(0, 0, 0, 0.06) 1px, transparent 2px);
+  opacity: 0.12;
+  filter: blur(0.2px);
+  pointer-events: none;
+}
+
+/* ---------- Iris container that will move (holds pupil + glint) ---------- */
+.iris {
+  width: 22px;
+  height: 120%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* vertical-slit pupil */
+.pupil {
+  width: 18px;
+  height: 88%;
+  background: linear-gradient(180deg, #000 0%, #020202 100%);
+  border-radius: 12px;
+  box-shadow: inset 0 -6px 8px rgba(255, 255, 255, 0.02);
+  transform-origin: center;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+  position: relative;
+  transition: transform 100ms ease;
+}
+
+/* small white glint to the inner side */
+.glint {
+  position: absolute;
+  width: 8px;
+  height: 22px;
+  right: -6px;
+  top: 18%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  border-radius: 3px;
+  opacity: 0.9;
+  transform: rotate(14deg);
+  filter: blur(0.2px);
+  pointer-events: none;
+}
+
+/* active (typing) expression: slightly narrower eye & more contrast */
+.eye.active {
+  transform: scale(1.02) rotate(var(--rot, 0deg));
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.7), inset 0 -12px 28px rgba(0, 0, 0, 0.55);
+}
+
+/* when typing, make the pupil appear as a narrower slit */
+.eye.active .pupil {
+  transform: scaleY(0.44);
+}
+
+/* thinking state - wider pupils and subtle glow */
+.eye.thinking {
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.75), 
+              inset 0 -8px 24px rgba(0, 0, 0, 0.5),
+              0 0 20px rgba(245, 199, 91, 0.15);
+}
+
+.eye.thinking .pupil {
+  transform: scaleY(0.75) scaleX(1.1);
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  box-shadow: inset 0 -4px 12px rgba(255, 255, 255, 0.03),
+              0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+.eye.thinking .glint {
+  opacity: 1.1;
+  width: 10px;
+  height: 28px;
+}
+
+/* set rotations back for each side when active */
+.eye.left.active  { 
+  --rot: -12deg; 
+}
+
+.eye.right.active { 
+  --rot: 12deg; 
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 760px) {
+  .eye { 
+    width: 120px; 
+    height: 60px; 
+  }
+}

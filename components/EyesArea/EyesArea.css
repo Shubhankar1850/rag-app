@@ -1,0 +1,25 @@
+/* ---------- EYES area - large central band ---------- */
+.eyes-area {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.06));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 12px;
+  }
+  
+  /* center container for both eyes */
+  .eyes-center {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ---------- Small screens ---------- */
+  @media (max-width: 760px) {
+    .eyes-center { 
+      gap: 24px; 
+      padding: 12px; 
+    }
+  }
