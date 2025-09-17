@@ -5,7 +5,7 @@ import './InputArea.css'
 
 interface InputAreaProps {
   input: string
-  inputRef: RefObject<HTMLInputElement>
+  inputRef: RefObject<HTMLInputElement | null>
   onInputChange: (e: ChangeEvent<HTMLInputElement>) => void
   onCursorMove: (e: KeyboardEvent<HTMLInputElement> | MouseEvent<HTMLInputElement>) => void
   onInputFocus: (e: FocusEvent<HTMLInputElement>) => void
