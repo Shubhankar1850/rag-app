@@ -6,6 +6,7 @@ import MessagesArea from '../../components/MessageArea/MessageArea'
 import InputArea from '../../components/InputArea/InputArea'
 import { useChat } from '../../hooks/useChat'
 import './page.css'
+import Link from 'next/link'
 
 interface EyePosition {
   x: number
@@ -153,7 +154,7 @@ export default function ChatApp() {
       />
       
       <header className="chat-header">
-        <h1>CareerCompanion</h1>
+      <Link href="/"> CareerCompanion</Link>
       </header>
 
       <EyesArea 

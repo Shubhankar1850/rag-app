@@ -1,6 +1,6 @@
 .chat-container {
     max-width: 980px;
-    height: 100vh;
+    height: 100dvh;
     margin: 0 auto;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
